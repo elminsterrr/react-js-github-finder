@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './style.css';
 
 import SearchBar from '../SearchBar';
+import GithubDataTable from '../GithubDataTable';
 
 const App = props => (
   <div className="App">
@@ -12,6 +13,7 @@ const App = props => (
     </header>
     <div>
       <SearchBar />
+      <GithubDataTable />
     </div>
   </div>
 );
