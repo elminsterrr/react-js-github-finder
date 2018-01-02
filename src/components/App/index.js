@@ -5,7 +5,7 @@ import './style.css';
 import SearchBar from '../SearchBar';
 import GithubDataTable from '../GithubDataTable';
 
-const App = props => (
+const App = () => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
