@@ -23,19 +23,21 @@ class SearchBar extends Component {
   }
 
   startSearch(query) {
-    const storedTerms = this.props.searchedTerm;
+    const { searchedTerm } = this.props;
+    const innerSearch = this.props.search;
+    const innerLoadFromStore = this.props.loadFromStore;
     let foundDuplicate = false;
 
-    if (storedTerms.length === 0 && query) {
+    if (searchedTerm.length === 0 && query) {
       localStorage.setItem('lastSearch', query);
-      return this.props.search(query);
+      return innerSearch(query);
     }
 
-    if (storedTerms.length !== 0 && query) {
-      const testDuplicate = storedTerms.map((term, index) => {
+    if (searchedTerm.length !== 0 && query) {
+      const testDuplicate = searchedTerm.map((term, index) => {
         if (term === query) {
           localStorage.setItem('lastSearch', query);
-          this.props.loadFromStore(index);
+          innerLoadFromStore(index);
           return true;
         }
         return false;
@@ -43,7 +45,7 @@ class SearchBar extends Component {
       foundDuplicate = testDuplicate.some(element => element);
     }
 
-    if (storedTerms.length !== 0 && !query) {
+    if (searchedTerm.length !== 0 && !query) {
       return false;
     }
 
@@ -52,7 +54,7 @@ class SearchBar extends Component {
     }
 
     localStorage.setItem('lastSearch', query);
-    return this.props.search(query);
+    return innerSearch(query);
   }
 
   onChange = ({ target: { value } }) => {

@@ -6,12 +6,13 @@ import './style.css';
 
 class GithubDataTable extends Component {
   render() {
+    const { showData, savedData } = this.props;
     let data = null;
 
-    if (this.props.showData === 'last') {
-      data = _.last(this.props.savedData);
+    if (showData === 'last') {
+      data = _.last(savedData);
     } else {
-      data = this.props.savedData[this.props.showData];
+      data = savedData[showData];
     }
 
     return (
