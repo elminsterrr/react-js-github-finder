@@ -11,6 +11,7 @@ export function search(query) {
     request.then(({ data: dataFromGithub }) => {
       dispatch({ type: SEARCH_TERM, payload: query });
       dispatch({ type: SAVE_DATA, payload: dataFromGithub });
+      dispatch({ type: SHOW_DATA, payload: 'last' });
     });
   };
 }
