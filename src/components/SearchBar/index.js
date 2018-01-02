@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import './style.css';
+
+import { search } from '../../actions/';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -32,4 +35,15 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+function mapStateToProps(state) {
+  return {
+    searchedTerm: state.searchedTerm,
+    savedData: state.savedData,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ search }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
