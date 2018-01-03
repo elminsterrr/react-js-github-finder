@@ -1,8 +1,9 @@
 input {
   width: 20%;
+  text-align: center;
 }
 
-.Search-bar {
+.SearchBar {
   text-align: center;
   margin: 20px;
 }

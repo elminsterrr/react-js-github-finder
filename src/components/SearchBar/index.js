@@ -66,7 +66,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="Search-bar">
+      <div className="SearchBar">
         <input
           placeholder="Type something to search GitHub"
           value={this.state.inputValue}
