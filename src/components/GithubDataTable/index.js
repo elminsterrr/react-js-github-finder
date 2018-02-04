@@ -52,7 +52,7 @@ class GithubDataTable extends Component {
                 ],
               },
             ]}
-            defaultPageSize={5}
+            defaultPageSize={10}
             pageSizeOptions={[5, 10, 15, 20]}
             className="-striped -highlight"
           />
