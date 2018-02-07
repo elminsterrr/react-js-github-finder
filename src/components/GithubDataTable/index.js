@@ -14,7 +14,6 @@ class GithubDataTable extends Component {
     } else {
       data = savedData[showData];
     }
-
     return (
       <div>
         {data && (
@@ -40,14 +39,34 @@ class GithubDataTable extends Component {
                     accessor: d => d.owner.login,
                   },
                   {
-                    Header: 'Stars',
-                    id: 'stars',
-                    accessor: d => d.stargazers_count,
+                    Header: 'Link',
+                    id: 'link',
+                    accessor: d => d.html_url,
+                    Cell: props => (
+                      <a href={props.value} target="_blank">
+                        {props.value}
+                      </a>
+                    ),
                   },
                   {
                     Header: 'Created at',
                     id: 'createdAt',
                     accessor: d => d.created_at.slice(0, 10),
+                  },
+                  {
+                    Header: 'Updated at',
+                    id: 'updatedAt',
+                    accessor: d => d.updated_at.slice(0, 10),
+                  },
+                  {
+                    Header: 'Stars',
+                    id: 'stars',
+                    accessor: d => d.stargazers_count,
+                  },
+                  {
+                    Header: 'Forks',
+                    id: 'forks',
+                    accessor: d => d.forks_count,
                   },
                 ],
               },
@@ -64,7 +83,6 @@ class GithubDataTable extends Component {
 
 function mapStateToProps(state) {
   return {
-    searchedTerm: state.searchedTerm,
     savedData: state.savedData,
     showData: state.showData,
   };
