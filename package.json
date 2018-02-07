@@ -1,9 +1,12 @@
 {
-  "name": "callstack-io-task",
+  "name": "react-js-github-finder",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "eslint": "^4.14.0",
+    "eslint-config-callstack-io": "^1.0.1",
+    "express": "^4.16.2",
     "lodash": "^4.17.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -20,8 +23,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "eslint": "^4.14.0",
-    "eslint-config-callstack-io": "^1.0.1"
-  }
+  "devDependencies": {}
 }
