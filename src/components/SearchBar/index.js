@@ -80,7 +80,6 @@ class SearchBar extends Component {
 function mapStateToProps(state) {
   return {
     searchedTerm: state.searchedTerm,
-    savedData: state.savedData,
   };
 }
 
