@@ -2,14 +2,14 @@
 
 A lightweight application for searching GitHub built with React.
 
-You can see it live here: [Heroku](https://google.com/)
+You can see it live here: [Heroku](https://react-js-github-finder.herokuapp.com/)
 
 
 ## Features
 
 - Search GitHub
 - Sort results by Id, Repo Title, Owner, Stars or Creation Date
-- App remembers your last search when you go back to page
+- The app remembers your last search when it starts after a break
 
 
 ## Getting Started

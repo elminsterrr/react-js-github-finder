@@ -8,8 +8,9 @@ import GithubDataTable from '../GithubDataTable';
 const App = () => (
   <div className="App">
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
       <h1 className="App-title">The GitHub Finder</h1>
+      <p className="App-subtitle">powered by</p>
+      <img src={logo} className="App-logo" alt="logo" />
     </header>
     <div>
       <SearchBar />

@@ -7,3 +7,8 @@ input {
   text-align: center;
   margin: 20px;
 }
+
+.SearchBar-input {
+  margin: 10px 5px;
+  padding: 5px;
+}

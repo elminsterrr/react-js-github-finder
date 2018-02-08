@@ -68,6 +68,7 @@ class SearchBar extends Component {
     return (
       <div className="SearchBar">
         <input
+          className="SearchBar-input"
           placeholder="Type something to search GitHub"
           value={this.state.inputValue}
           onChange={this.onChange}
@@ -80,7 +81,6 @@ class SearchBar extends Component {
 function mapStateToProps(state) {
   return {
     searchedTerm: state.searchedTerm,
-    savedData: state.savedData,
   };
 }
 
